@@ -1,0 +1,12 @@
+syntax = "proto3";
+package validate;
+
+import "google/protobuf/empty.proto";
+
+message PingMessage {
+  string greeting = 1;
+}
+
+service Ping {
+  rpc SayHello(google.protobuf.Empty) returns (PingMessage) {}
+}
